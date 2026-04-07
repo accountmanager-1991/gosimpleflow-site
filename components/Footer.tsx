@@ -33,22 +33,24 @@ export default function Footer() {
               <li><Link href="/blog" className="hover:text-[#f0cc00]">Blog</Link></li>
               <li><Link href="/reviews" className="hover:text-[#f0cc00]">Reviews</Link></li>
               <li><Link href="/faq" className="hover:text-[#f0cc00]">FAQ</Link></li>
-              <li><Link href="/contact" className="hover:text-[#f0cc00]">Contact</Link></li>
-              <li><Link href="/privacy" className="hover:text-[#f0cc00]">Privacy</Link></li>
-              <li><Link href="/terms" className="hover:text-[#f0cc00]">Terms</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wider">Get In Touch</h3>
             <ul className="space-y-2 text-sm">
               <li><a href="tel:+18553757923" className="hover:text-[#f0cc00]">(855) 375-7923</a></li>
+              <li><Link href="/contact" className="hover:text-[#f0cc00]">Contact</Link></li>
               <li><Link href="/quote" className="text-[#f0cc00] font-semibold hover:text-yellow-300">Get Free Quote →</Link></li>
             </ul>
           </div>
         </div>
-        <div className="border-t border-slate-700 mt-10 pt-6 text-sm text-slate-500 flex flex-col sm:flex-row justify-between gap-3">
+        <div className="border-t border-slate-700 mt-10 pt-6 text-sm text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p>© {new Date().getFullYear()} Simple Flow. All rights reserved.</p>
-          <p>Solar Made Simple.</p>
+          <div className="flex items-center gap-5">
+            <Link href="/privacy" className="hover:text-[#f0cc00]">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#f0cc00]">Terms of Service</Link>
+            <span>Solar Made Simple.</span>
+          </div>
         </div>
       </div>
     </footer>

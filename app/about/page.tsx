@@ -16,7 +16,7 @@ export default function Page() {
           Simple Flow was founded to fix what&apos;s broken in the solar industry: pushy sales reps, slow installs, hidden fees, and confusing paperwork.
         </p>
         <p className="text-lg text-slate-700 leading-relaxed mt-4">
-          Our 100% virtual process means no one shows up at your door. Our average install timeline is 30 days — about a third of the industry standard. And we handle every permit, every utility form, and every inspection so you don&apos;t have to.
+          Our 100% virtual process means no one shows up at your door. Our average install timeline is 30-60 days — about a third of the industry standard. And we handle every permit, every utility form, and every inspection so you don&apos;t have to.
         </p>
         <p className="text-lg text-slate-700 leading-relaxed mt-4">
           We service homeowners across New York, Pennsylvania, Maryland, New Jersey, Connecticut, Massachusetts, and California — and we&apos;re growing.

@@ -28,7 +28,7 @@ export default function Hero() {
           </div>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-slate-300">
             <span className="flex items-center gap-2"><span className="text-[#f0cc00]">✓</span> No upfront cost</span>
-            <span className="flex items-center gap-2"><span className="text-[#f0cc00]">✓</span> Installed in 30 days</span>
+            <span className="flex items-center gap-2"><span className="text-[#f0cc00]">✓</span> Installed in 30-60 days</span>
             <span className="flex items-center gap-2"><span className="text-[#f0cc00]">✓</span> 25-year warranty</span>
             <span className="flex items-center gap-2"><span className="text-[#f0cc00]">✓</span> 100% virtual process</span>
           </div>

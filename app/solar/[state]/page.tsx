@@ -69,7 +69,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
           </div>
           <div className="bg-[#fff8d1] border border-[#f0cc00]/40 rounded-2xl p-6 text-center">
             <div className="text-sm font-semibold text-[#c9a700] uppercase tracking-wider mb-2">Install Time</div>
-            <div className="text-4xl font-bold text-[#32373c]">~30 days</div>
+            <div className="text-4xl font-bold text-[#32373c]">30-60 days</div>
           </div>
           <div className="bg-green-50 border border-green-200 rounded-2xl p-6 text-center">
             <div className="text-sm font-semibold text-green-700 uppercase tracking-wider mb-2">25-yr savings est.</div>

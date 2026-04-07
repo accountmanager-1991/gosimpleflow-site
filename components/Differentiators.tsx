@@ -7,7 +7,7 @@ const ITEMS = [
   {
     icon: "⚡",
     title: "Fast Installation",
-    body: "Most installs scheduled within 30 days. Industry average is 90+. We move fast so you start saving sooner.",
+    body: "Most installs scheduled within 30-60 days. Industry average is 90+. We move fast so you start saving sooner.",
   },
   {
     icon: "🛡️",
