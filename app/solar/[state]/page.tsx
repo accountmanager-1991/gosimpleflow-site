@@ -4,7 +4,7 @@ import { getStateByCode, getAllStatePaths, STATES } from "@/lib/states"
 import { INCENTIVES_BY_STATE } from "@/lib/incentives"
 import { TESTIMONIALS } from "@/content/testimonials"
 import TrustBar from "@/components/TrustBar"
-import HowItWorks from "@/components/HowItWorks"
+import HorizontalTimeline from "@/components/HorizontalTimeline"
 import CTASection from "@/components/CTASection"
 import type { Metadata } from "next"
 
@@ -107,7 +107,7 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         </div>
       </section>
 
-      <HowItWorks />
+      <HorizontalTimeline />
 
       {/* Local testimonials */}
       <section className="py-20 bg-slate-50">
