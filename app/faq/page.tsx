@@ -16,7 +16,7 @@ const FAQS = [
 export default function Page() {
   return (
     <>
-      <section className="bg-gradient-to-br from-slate-900 to-orange-900 text-white py-16">
+      <section className="bg-gradient-to-br from-[#32373c] to-[#1f2226] text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">Frequently asked questions</h1>
           <p className="text-lg text-slate-300">Common questions about going solar with Simple Flow.</p>
@@ -25,10 +25,10 @@ export default function Page() {
       <section className="py-20 max-w-3xl mx-auto px-4">
         <div className="space-y-4">
           {FAQS.map((f, i) => (
-            <details key={i} className="group bg-white border border-slate-200 rounded-xl p-5 hover:border-orange-300 transition">
-              <summary className="cursor-pointer font-bold text-slate-900 list-none flex justify-between items-center">
+            <details key={i} className="group bg-white border border-slate-200 rounded-xl p-5 hover:border-[#f0cc00] transition">
+              <summary className="cursor-pointer font-bold text-[#32373c] list-none flex justify-between items-center">
                 {f.q}
-                <span className="text-orange-500 group-open:rotate-45 transition">+</span>
+                <span className="text-[#c9a700] group-open:rotate-45 transition">+</span>
               </summary>
               <p className="mt-3 text-slate-600 leading-relaxed">{f.a}</p>
             </details>
