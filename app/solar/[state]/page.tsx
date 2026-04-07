@@ -5,6 +5,7 @@ import { INCENTIVES_BY_STATE } from "@/lib/incentives"
 import { TESTIMONIALS } from "@/content/testimonials"
 import TrustBar from "@/components/TrustBar"
 import HorizontalTimeline from "@/components/HorizontalTimeline"
+import HeroCalculator from "@/components/HeroCalculator"
 import CTASection from "@/components/CTASection"
 import type { Metadata } from "next"
 
@@ -34,25 +35,30 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
   return (
     <>
       {/* State Hero */}
-      <section className="relative bg-gradient-to-br from-[#32373c] via-[#3d434a] to-[#5a5145] text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(251,146,60,0.25),_transparent_60%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-3xl">
-            <span className="inline-block bg-[#f0cc00]/20 border border-[#f0cc00]/40 text-[#f0cc00] px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-6">
-              Solar in {s.state}
-            </span>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
-              Solar installer in {s.state}
-            </h1>
-            <p className="text-lg text-slate-300 mb-2">{s.blurb}</p>
-            <p className="text-sm text-[#f0cc00] mb-8">💡 {s.incentiveHighlight}</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/quote" className="bg-[#f0cc00] hover:bg-[#d9b800] text-[#32373c] px-8 py-4 rounded-lg font-bold text-lg">
-                Get Your Free Quote
-              </Link>
-              <a href="tel:+18553757923" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg text-center">
-                Call (855) 375-7923
-              </a>
+      <section className="relative bg-gradient-to-br from-[#32373c] via-[#3d434a] to-[#5a5145] text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(240,204,0,0.25),_transparent_60%)]" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-12 items-center">
+            <div className="lg:col-span-3">
+              <span className="inline-block bg-[#f0cc00]/20 border border-[#f0cc00]/40 text-[#f0cc00] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                Solar in {s.state}
+              </span>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
+                Solar installer in {s.state}
+              </h1>
+              <p className="text-lg text-slate-300 mb-3">{s.blurb}</p>
+              <p className="text-sm text-[#f0cc00] mb-8">💡 {s.incentiveHighlight}</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/quote" className="bg-[#f0cc00] hover:bg-[#d9b800] text-[#32373c] px-8 py-4 rounded-lg font-bold text-lg text-center">
+                  Get Your Free Quote
+                </Link>
+                <a href="tel:+18553757923" className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg text-center">
+                  Call (855) 375-7923
+                </a>
+              </div>
+            </div>
+            <div className="lg:col-span-2">
+              <HeroCalculator />
             </div>
           </div>
         </div>
