@@ -3,7 +3,6 @@ import { notFound } from "next/navigation"
 import { getStateByCode, getAllStatePaths, STATES } from "@/lib/states"
 import { INCENTIVES_BY_STATE } from "@/lib/incentives"
 import { TESTIMONIALS } from "@/content/testimonials"
-import TrustBar from "@/components/TrustBar"
 import HorizontalTimeline from "@/components/HorizontalTimeline"
 import HeroCalculator from "@/components/HeroCalculator"
 import CTASection from "@/components/CTASection"
@@ -64,7 +63,6 @@ export default async function StatePage({ params }: { params: Promise<{ state: s
         </div>
       </section>
 
-      <TrustBar />
 
       {/* Local stats */}
       <section className="py-16 bg-white">
