@@ -5,6 +5,9 @@ import Link from "next/link"
 
 type FormData = {
   address: string
+  city: string
+  state: string
+  zip: string
   bill: string
   homeowner: string
   roofAge: string
@@ -15,6 +18,8 @@ type FormData = {
   phone: string
   schedule: string
 }
+
+const STATES = ["NY", "PA", "MD", "NJ", "CT", "MA", "CA"]
 
 const STEPS = [
   "Address",
@@ -45,7 +50,8 @@ function estimateSavings(bill: string): string {
 export default function QuotePage() {
   const [step, setStep] = useState(0)
   const [data, setData] = useState<FormData>({
-    address: "", bill: "", homeowner: "", roofAge: "", credit: "",
+    address: "", city: "", state: "", zip: "",
+    bill: "", homeowner: "", roofAge: "", credit: "",
     firstName: "", lastName: "", email: "", phone: "", schedule: "",
   })
   const [submitting, setSubmitting] = useState(false)
@@ -92,7 +98,7 @@ export default function QuotePage() {
 
   const canAdvance = () => {
     switch (step) {
-      case 0: return data.address.length > 5
+      case 0: return data.address.length > 3 && data.city.length > 1 && !!data.state && /^\d{5}$/.test(data.zip)
       case 1: return !!data.bill
       case 2: return !!data.homeowner
       case 3: return !!data.roofAge
@@ -121,14 +127,43 @@ export default function QuotePage() {
             <>
               <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">Let&apos;s start with your address</h2>
               <p className="text-slate-600 mb-6">We&apos;ll use this to pull your roof and bill data — no phone calls needed.</p>
-              <input
-                type="text"
-                placeholder="Start typing your address…"
-                value={data.address}
-                onChange={e => update("address", e.target.value)}
-                className="w-full border border-slate-300 rounded-lg px-4 py-3 text-lg focus:outline-none focus:border-orange-500"
-                autoFocus
-              />
+              <div className="space-y-3">
+                <input
+                  type="text"
+                  placeholder="Street address"
+                  value={data.address}
+                  onChange={e => update("address", e.target.value)}
+                  className="w-full border border-slate-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-orange-500"
+                  autoFocus
+                />
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <input
+                    type="text"
+                    placeholder="City"
+                    value={data.city}
+                    onChange={e => update("city", e.target.value)}
+                    className="border border-slate-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-orange-500 sm:col-span-1"
+                  />
+                  <select
+                    value={data.state}
+                    onChange={e => update("state", e.target.value)}
+                    className="border border-slate-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-orange-500 bg-white"
+                  >
+                    <option value="">State</option>
+                    {STATES.map(s => <option key={s} value={s}>{s}</option>)}
+                  </select>
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    placeholder="ZIP"
+                    value={data.zip}
+                    maxLength={5}
+                    onChange={e => update("zip", e.target.value.replace(/\D/g, ""))}
+                    className="border border-slate-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-orange-500"
+                  />
+                </div>
+                <p className="text-xs text-slate-500">We service NY, PA, MD, NJ, CT, MA, and CA.</p>
+              </div>
             </>
           )}
 
