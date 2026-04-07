@@ -1,4 +1,3 @@
-import HowItWorks from "@/components/HowItWorks"
 import FullProcess from "@/components/FullProcess"
 import CTASection from "@/components/CTASection"
 
@@ -14,10 +13,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Quick 5-step summary */}
-      <HowItWorks />
-
-      {/* Detailed 11-step roadmap */}
       <FullProcess />
 
       <CTASection />
