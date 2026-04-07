@@ -9,10 +9,13 @@ export default function Hero() {
           <span className="inline-block bg-[#f0cc00]/20 border border-[#f0cc00]/40 text-[#f0cc00] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
             Solar Made Simple
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
             Lock in your electric rate<br />for 25 years — <span className="text-[#f0cc00]">$0 down</span>
           </h1>
-          <p className="text-lg sm:text-xl text-slate-300 mb-8 max-w-2xl">
+          <p className="text-xl sm:text-2xl text-[#f0cc00] font-semibold mb-4">
+            Own your power. Avoid rate hikes.
+          </p>
+          <p className="text-lg text-slate-300 mb-8 max-w-2xl">
             We handle the permits, install, and paperwork. Virtual consultation, fast installation, no surprises.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
