@@ -12,8 +12,9 @@ export default function Header() {
           <Link href="/how-it-works" className="hover:text-[#c9a700] transition">How It Works</Link>
           <Link href="/financing" className="hover:text-[#c9a700] transition">Financing</Link>
           <Link href="/incentives" className="hover:text-[#c9a700] transition">Incentives</Link>
+          <Link href="/gallery" className="hover:text-[#c9a700] transition">Gallery</Link>
+          <Link href="/blog" className="hover:text-[#c9a700] transition">Blog</Link>
           <Link href="/about" className="hover:text-[#c9a700] transition">About</Link>
-          <Link href="/faq" className="hover:text-[#c9a700] transition">FAQ</Link>
         </nav>
         <div className="flex items-center gap-3">
           <a href="tel:+18553757923" className="hidden sm:block text-sm font-semibold text-[#32373c] hover:text-[#c9a700]">(855) 375-7923</a>
